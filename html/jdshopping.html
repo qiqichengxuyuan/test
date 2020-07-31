@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>京东购物</title>
+    <link rel="stylesheet" type="text/css" href="../css/iconfont.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #shopping{
+            width: 100%;
+            height: 2000px;
+        }
+        #shopping #wrap{
+            width: 100%;
+            height: 187px;
+            border: solid 1px red;
+
+        }
+        #shopping #wrap ul{
+            height: 25%;
+            /*border: solid 1px #000000;*/
+            display: flex;
+            list-style: none;
+            background-color: red;
+        }
+
+        #shopping #wrap ul li:nth-child(1), #shopping #wrap ul li:nth-child(3){
+            width: 10%;
+            height: 100%;
+            /*border: solid 1px red;*/
+            text-align: center;
+
+        }
+        #shopping #wrap ul li span:nth-child(1){
+            font-size: 37px;
+        }
+
+        #shopping #wrap ul li input{
+            text-align: center;
+            height: 60%;
+            width: 80%;
+        }
+        #shopping #wrap ul li:nth-child(2){
+            width: 70%;
+            height: 80%;
+            /*border: solid 1px red;*/
+            display: flex;
+            border-radius: 70px 70px 70px 70px;
+            background-color: white;
+            margin-top: 5px;
+            margin-left: 6px;
+        }
+        #shopping #wrap ul li:nth-child(2) span{
+            width: 10%;
+            height: 80%;
+            /*border: solid 1px red;*/
+            font-size: 20px;
+            text-align: center;
+            margin-top: 8px;
+        }
+        #shopping #wrap ul li:nth-child(2) input{
+            width: 70%;
+            height: 70%;
+            /*border: solid 1px red;*/
+            font-size: 14px;
+            margin-top: 5px;
+            border: 0;
+            margin-left: 5px;
+        }
+        #shopping #wrap .imgs{
+            width: 100%;
+            height: 75%;
+            /*border: solid 1px #000000;*/
+            margin: auto;
+            position: relative;
+            background-color: red;
+        }
+        #shopping #wrap div .img{
+            width: 90%;
+            height: 99%;
+            /*border: solid 1px #000000;*/
+            background-image: url("https://m.360buyimg.com/mobilecms/s700x280_jfs/t1/132396/17/4602/169419/5f110f7aE8a0306b7/84aea60cba9662e0.jpg!cr_1125x445_0_171!q70.jpg.dpg");
+            background-size: 100% 100%;
+            position: absolute;
+            left: 15px;
+            top: 0;
+        }
+        #shopping div:nth-child(2){
+            /*width: 375px;*/
+            /*height: 160px;*/
+            width: 100%;
+            height: 160px;
+            /*border: solid 1px red;*/
+        }
+        #shopping div:nth-child(2) ul{
+            display: flex;
+            flex-wrap: wrap;
+            align-content: space-between;
+        }
+        #shopping div:nth-child(2) ul li{
+            /*width: 73px;*/
+            width: 19.4%;
+            height: 78px;
+            /*border: solid 1px red;*/
+            list-style: none;
+        }
+        #shopping div:nth-child(2) ul li img{
+            width: 40px;
+            height: 40px;
+            margin-left: 15px;
+            margin-top: 10px;
+        }
+        #shopping div:nth-child(2) ul li span{
+            font-size: 12px;
+            margin-top: 5px;
+            margin-left: 10px;
+        }
+        #shopping div:nth-child(3){
+            /*width: 375px;*/
+            width: 100%;
+            height: 153px;
+            /*border: solid 1px #000000;*/
+        }
+        #shopping div:nth-child(3) .top{
+            width: 100%;
+            height: 34px;
+            /*border: solid 1px #000000;*/
+            display: flex;
+        }
+        #shopping div:nth-child(3) .top div{
+            font-size: 14px;
+            margin: 8px 5px 0 10px;
+            width: 56px;
+
+        }
+        #shopping div:nth-child(3) .top .time{
+            font-size: 12px;
+            width: 100px;
+            height: 18px;
+            margin-right: 0;
+            margin-left: 0;
+            border-radius: 70px 70px 70px 70px ;
+            display: flex;
+            border: solid 1px red;
+        }
+        #shopping div:nth-child(3) .top .time strong{
+            background-color: red;
+            border-radius: 70px 70px 70px 70px ;
+            color: white;
+        }
+        #shopping div:nth-child(3) .top .miaosha {
+            font-size: 12px;
+            height: 18px;
+            margin-left: 120px;
+            color: red;
+        }
+        #shopping div:nth-child(3) .xia{
+            width: 100%;
+            height: 119px;
+            display: flex;
+        }
+        #shopping  div:nth-child(3) .xia .imgg{
+            width: 100%;
+            height: 119px;
+            /*border: solid 1px #000000;*/
+            flex: 1;
+        }
+        #shopping  div:nth-child(3) .xia .imgg img{
+             width: 90%;
+            height: 54%;
+          }
+        #shopping  div:nth-child(3) .xia .imgg span{
+            margin: 10% 10%;
+        }
+        #shopping  .xinren {
+            width: 100%;
+            height: 130px;
+            /*border: solid 1px red;*/
+            display: flex;
+            justify-content: center;
+        }
+        #shopping  .xinren .zuo{
+            width: 177px;
+            height: 120px;
+            /*border: solid 1px red;*/
+            background-image: url("https://m.360buyimg.com/mobilecms/s376x240_jfs/t1/49601/16/12206/115887/5d91b4d5E34709952/aba2bcb4855e6e52.png!q70.jpg.dpg");
+            background-size: 100% 100%;
+        }
+        #shopping  .xinren .you{
+            width: 177px;
+            height: 120px;
+            /*border: solid 1px red;*/
+            background-image: url("https://m.360buyimg.com/mobilecms/s376x240_jfs/t1/32449/33/15631/174497/5cc2d86bE0289110c/9c53e25651659d43.png!q70.jpg.dpg");
+            background-size: 100% 100%;
+        }
+
+        #shopping .youhui{
+            width: 100%;
+            height: 50px;
+            /*border: solid 1px red;*/
+        }
+        #shopping .youhui div{
+            width: 100%;
+            height: 50px;
+            background-image: url("https://m.360buyimg.com/mobilecms/s750x100_jfs/t1/111655/4/10853/142323/5ef22455Eb86abfc1/2bf122bb2e87d6e3.png.webp");
+            background-size: 100% 100%;
+        }
+        #shopping .tu{
+            width: 100%;
+            height: 100px;
+            /*border: solid 1px red;*/
+            display: flex;
+            justify-content: center;
+        }
+        #shopping .tu .q{
+            width: 118px;
+            height: 93px;
+            /*border: solid 1px red;*/
+            background-image: url("https://m.360buyimg.com/mobilecms/s244x187_jfs/t1/126052/7/7636/34627/5f16931cEdd575e76/4bb437a750f6e861.png!q70.jpg.dpg");
+            background-size: 109px 83px;
+            background-repeat: no-repeat;
+            background-position: left bottom;
+        }
+        #shopping .tu .e{
+            width: 118px;
+            height: 93px;
+            /*border: solid 1px red;*/
+            background-image: url("https://m.360buyimg.com/mobilecms/s244x187_jfs/t1/126052/7/7636/34627/5f16931cEdd575e76/4bb437a750f6e861.png!q70.jpg.dpg");
+            background-size: 109px 83px;
+            background-repeat: no-repeat;
+            background-position: right bottom;
+        }
+        #shopping .tu .w{
+            width: 122px;
+            height: 93px;
+            /*border: solid 1px red;*/
+            background-image: url("https://m.360buyimg.com/mobilecms/s244x187_jfs/t1/131104/31/5200/32660/5f194d10E6a719b22/24a6712b56b7ad90.png!q70.jpg.dpg");
+            background-size: 100% 100%;
+        }
+        #shopping .xiaoyuan{
+            width: 100%;
+            height:249px;
+            /*border: solid 1px red;*/
+            display: flex;
+            flex-wrap: wrap;
+        }
+        #shopping .xiaoyuan .shang{
+            width: 100%;
+            height:120px;
+            /*border: solid 1px red;*/
+            display: flex;
+            justify-content: center;
+        }
+        #shopping .xiaoyuan .shang div{
+            width: 176px;
+            height:109px;
+            /*border: solid 1px red;*/
+        }
+        #shopping .xiaoyuan .xia{
+            width: 100%;
+            height:119px;
+            /*border: solid 1px red;*/
+            display: flex;
+            justify-content: center;
+        }
+        #shopping .xiaoyuan .xia div{
+            width: 75px;
+            height:107px;
+            /*border: solid 1px red;*/
+        }
+        #shopping .goods .tu{
+            width: 100%;
+            height: 1370px;
+            /*border: solid 1px #000000;*/
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        #shopping .goods .tu div{
+            width: 175px;
+            height: 267px;
+            /*border: solid 1px #000000;*/
+        }
+        #shopping .goods .tu div img{
+            width: 176px;
+            height: 176px;
+            /*border: solid 1px red;*/
+        }
+        /*width: 50px;height: 25px;margin-left: 60px;font-size: 13px;color: #999999;text-align: center;line-height: normal;*/
+        #shopping .goods .tu .pian div:nth-child(2){
+            width: 50px;
+            height: 20px;
+            margin-left: 70px;
+            font-size: 13px;
+            color: #999999;
+            text-align: center;
+            border: solid 1px #000000;
+        }
+        #shopping .dingwei{
+            width: 375px;
+            height: 50px;
+            /*border: solid 1px red;*/
+        }
+        #shopping .dingwei ul{
+            display: flex;
+            list-style: none;
+            position: fixed;
+            bottom: 0;
+            background-color: white;
+        }
+        #shopping .dingwei ul li{
+            width: 75px;
+            height: 50px;
+            /*border: solid 1px #000000;*/
+            font-size: 12px;
+            text-align: center;
+
+        }
+        #shopping .dingwei ul li span{
+            background-color: white;
+            font-size: 33px;
+        }
+        #shopping .dingwei ul li a{
+            /*去除下划线*/
+            text-decoration: none;
+            color: black;
+        }
+        input {
+            outline: none;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+            cursor: pointer;
+        }
+
+
+    </style>
+</head>
+<body>
+<div id="shopping">
+    <div id="wrap">
+        <ul>
+            <li>
+                <span class="iconfont">&#xe747;</span>
+            </li>
+            <li>
+                <span class="iconfont">&#xe63c;</span>
+                <input type="text" style="text-align: left;" placeholder="请输入您想要的宝贝">
+            </li>
+                <a href="login.html" style="text-align: center;margin-top: 12px;margin-left: 8px;color: white;text-decoration: none;" >登陆</a>
+            </li>
+        </ul>
+        <div class="imgs">
+            <div class="img"></div>
+            <div class="img"></div>
+            <div class="img"></div>
+            <div class="img"></div>
+        </div>
+    </div>
+    <div>
+        <ul>
+            <li>
+                <img src="https://m.360buyimg.com/mobilecms/s120x120_jfs/t1/125678/35/5947/4868/5efbf28cEbf04a25a/e2bcc411170524f0.png.webp" alt=""><br>
+                <span>京东超市</span>
+            </li>
+            <li>
+                <img src="https://m.360buyimg.com/mobilecms/s120x120_jfs/t1/125678/35/5947/4868/5efbf28cEbf04a25a/e2bcc411170524f0.png.webp" alt=""><br>
+                <span>京东超市</span>
+            </li>
+            <li>
+                <img src="https://m.360buyimg.com/mobilecms/s120x120_jfs/t1/125678/35/5947/4868/5efbf28cEbf04a25a/e2bcc411170524f0.png.webp" alt=""><br>
+                <span>京东超市</span>
+            </li>
+            <li>
+                <img src="https://m.360buyimg.com/mobilecms/s120x120_jfs/t1/125678/35/5947/4868/5efbf28cEbf04a25a/e2bcc411170524f0.png.webp" alt=""><br>
+                <span>京东超市</span>
+            </li>
+            <li>
+                <img src="https://m.360buyimg.com/mobilecms/s120x120_jfs/t1/125678/35/5947/4868/5efbf28cEbf04a25a/e2bcc411170524f0.png.webp" alt=""><br>
+                <span>京东超市</span>
+            </li>
+            <li>
+                <img src="https://m.360buyimg.com/mobilecms/s120x120_jfs/t1/125678/35/5947/4868/5efbf28cEbf04a25a/e2bcc411170524f0.png.webp" alt=""><br>
+                <span>京东超市</span>
+            </li>
+            <li>
+                <img src="https://m.360buyimg.com/mobilecms/s120x120_jfs/t1/125678/35/5947/4868/5efbf28cEbf04a25a/e2bcc411170524f0.png.webp" alt=""><br>
+                <span>京东超市</span>
+            </li>
+            <li>
+                <img src="https://m.360buyimg.com/mobilecms/s120x120_jfs/t1/125678/35/5947/4868/5efbf28cEbf04a25a/e2bcc411170524f0.png.webp" alt=""><br>
+                <span>京东超市</span>
+            </li>
+            <li>
+                <img src="https://m.360buyimg.com/mobilecms/s120x120_jfs/t1/125678/35/5947/4868/5efbf28cEbf04a25a/e2bcc411170524f0.png.webp" alt=""><br>
+                <span>京东超市</span>
+            </li>
+            <li>
+                <img src="https://m.360buyimg.com/mobilecms/s120x120_jfs/t1/125678/35/5947/4868/5efbf28cEbf04a25a/e2bcc411170524f0.png.webp" alt="">
+                <span>京东超市</span>
+            </li>
+        </ul>
+    </div>
+    <div>
+          <div class="top">
+              <div>京东秒杀</div>
+              <div class="time">
+                  <!--style="border: solid 1px red;border-radius: 70px 70px 70px 70px;"-->
+                  <strong>11点场</strong>&nbsp;00:00:00
+              </div>
+              <div class="miaosha" style="font-weight: bold">更多秒杀</div>
+          </div>
+          <div class="xia">
+              <div class="imgg">
+                  <img src="https://wqimg.jd.com/imgproxy/n7/s150x150_jfs/t1/122420/36/7306/167213/5f115f74E1f7e4a23/ac7eec48033dbacc.jpg.dpg" alt="">
+                  <span style="color: red;font-weight: 800">￥9.9</span>
+                  <span><del style="color: #999999">￥99</del></span>
+              </div>
+              <div class="imgg">
+                  <img src="https://wqimg.jd.com/imgproxy/n7/s150x150_jfs/t1/122420/36/7306/167213/5f115f74E1f7e4a23/ac7eec48033dbacc.jpg.dpg" alt="">
+                  <span style="color: red;font-weight: 800;align-items: center">￥9.9</span>
+                  <span><del style="color: #999999;justify-content: center">￥99</del></span>
+              </div>
+              <div class="imgg">
+                  <img src="https://wqimg.jd.com/imgproxy/n7/s150x150_jfs/t1/122420/36/7306/167213/5f115f74E1f7e4a23/ac7eec48033dbacc.jpg.dpg" alt="">
+                  <span style="color: red;font-weight: 800">￥9.9</span>
+                  <span><del style="color: #999999">￥99</del></span>
+              </div>
+              <div class="imgg">
+                  <img src="https://wqimg.jd.com/imgproxy/n7/s150x150_jfs/t1/122420/36/7306/167213/5f115f74E1f7e4a23/ac7eec48033dbacc.jpg.dpg" alt="">
+                  <span style="color: red;font-weight: 800">￥9.9</span>
+                  <span><del style="color: #999999">￥99</del></span>
+              </div>
+              <div class="imgg">
+                  <img src="https://wqimg.jd.com/imgproxy/n7/s150x150_jfs/t1/122420/36/7306/167213/5f115f74E1f7e4a23/ac7eec48033dbacc.jpg.dpg" alt="">
+                  <span style="color: red;font-weight: 800">￥9.9</span>
+                  <span><del style="color: #999999">￥99</del></span>
+              </div>
+          </div>
+    </div>
+    <div class="xinren">
+        <div class="zuo"></div>
+        <div class="you"></div>
+    </div>
+    <div class="youhui"><div></div></div>
+    <div class="tu">
+        <div class="q"></div>
+        <div class="w"></div>
+        <div class="e"></div>
+    </div>
+    <div style="width: 100%;height: 35px">
+        <img src="https://m.360buyimg.com/mobilecms/s750x80_jfs/t1/120788/8/5449/24646/5ef008ccEa30f561d/b59f6d8807cfb020.png!q70.jpg.dpg" alt="东家小院"style="width: 100%;height: 100%">
+    </div>
+    <div class="xiaoyuan">
+        <div class="shang" style="padding: 5px 0 5px 0">
+            <div style="width: 176px;height: 38px">
+                <span style="font-size: 16px;font-weight: 800;color: aqua;padding: 0 0 0 9px">食品专场</span><br>
+                <span style="font-size: 12px;color: #999999;padding: 0 0 0 9px">好吃到爆</span>
+                <div style="width: 176px;height: 65px">
+                    <img style="width: 60px;height: 60px;margin: 5px 7px 0" src="https://m.360buyimg.com/babel/s221x221_jfs/t1/119126/23/8854/309236/5ed31d5aE2f1a267b/63af19a8e8b530fe.jpg!q70.dpg" alt="">
+                    <img style="width: 60px;height: 60px;margin: 5px 7px 0" src="https://m.360buyimg.com/babel/s351x351_jfs/t1/141496/22/722/460550/5ee74584Eb399c631/a2d64e92a5543a04.jpg!q70.dpg" alt="">
+                </div>
+            </div>
+            <div>
+                <div style="width: 176px;height: 38px">
+                    <span style="font-size: 16px;font-weight: 800;color: aqua;padding: 0 0 0 9px">食品专场</span><br>
+                    <span style="font-size: 12px;color: #999999;padding: 0 0 0 9px">好吃到爆</span>
+                    <div style="width: 176px;height: 65px">
+                        <img style="width: 60px;height: 60px;margin: 5px 7px 0" src="https://m.360buyimg.com/mobilecms/s150x150_jfs/t1/85072/25/5818/20921/5def3796Eeb18104b/fed4740b6b58d144.jpg!q70.jpg.dpg" alt="">
+                        <img style="width: 60px;height: 60px;margin: 5px 7px 0" src="https://m.360buyimg.com/babel/s351x351_jfs/t1/141595/31/710/240744/5ee70d4fE8cedf6b4/c85d7c744dd8ccf3.jpg!q70.dpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="xia">
+              <div style="padding: 6px 0 5px 10px">
+                  <h3>深夜放毒</h3><span style="color: #999999;font-size: 12px">麻辣小龙虾</span>
+                  <img style="width: 60px;height: 60px;" src="https://m.360buyimg.com/babel/s351x351_jfs/t1/125198/29/5173/235398/5eec1780E399be723/ed7169f22f9d1d2c.jpg!q70.dpg" alt="">
+              </div>
+            <div style="padding: 6px 0 5px 10px">
+                <h3>深夜放毒</h3><span style="color: #999999;font-size: 12px">桃子</span>
+                <img style="width: 60px;height: 60px;" src="https://m.360buyimg.com/babel/s351x351_jfs/t1/73058/32/2285/307232/5d099e77E7d9c187d/6c3025dff51d0f15.jpg!q70.dpg" alt="">
+            </div>
+            <div style="padding: 6px 0 5px 10px">
+                <h3>深夜放毒</h3><span style="color: #999999;font-size: 12px">榴莲</span>
+                <img style="width: 60px;height: 60px;" src="https://m.360buyimg.com/babel/s351x351_jfs/t21148/111/2345162166/294572/d327aa92/5b51becaNe78be7fa.jpg!q70.dpg" alt="">
+            </div>
+            <div style="padding: 6px 0 5px 10px">
+                <h3>深夜放毒</h3><span style="color: #999999;font-size: 12px">葡萄</span>
+                <img style="width: 60px;height: 60px;" src="https://m.360buyimg.com/babel/s351x351_jfs/t1/80010/18/363/90443/5ce8f2cfEd5474ad5/5e84a721ca04fb96.jpg!q70.dpg" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="goods">
+        <img style="width: 100%;height: 35px" src="https://img11.360buyimg.com/jdphoto/jfs/t1/31601/22/15554/14040/5cc2a86fEbdb1098b/88174b36f85283b6.png" alt="">
+            <div class="tu">
+                <div class="pian">
+                    <a href="goodsdetails.html"><img  src="https://img10.360buyimg.com/mobilecms/s372x372_jfs/t1/98609/15/18413/144178/5e95b7ccEa81fae71/79ddbbddee493ec4.jpg!q70.dpg.webp" alt="">
+                <p style="width: 176px;height: 31px;overflow: hidden;text-overflow: ellipsis;font-size: 13px;white-space: normal">谷卓诗 圆领宽松百搭纯色棉短袖T恤女2020夏装新款 紫色 M（110-125斤)</p>
+                <div style="display: flex;width: 175px;height: 26px;margin-top: 5px"><strong style="color: red">￥99</strong><div>看相似</div></div>
+                    </a>
+            </div>
+                <div class="pian">
+                    <img src="https://img10.360buyimg.com/mobilecms/s372x372_jfs/t1/98609/15/18413/144178/5e95b7ccEa81fae71/79ddbbddee493ec4.jpg!q70.dpg.webp" alt="">
+                    <p style="width: 176px;height: 31px;overflow: hidden;text-overflow: ellipsis;font-size: 13px;white-space: normal">谷卓诗 圆领宽松百搭纯色棉短袖T恤女2020夏装新款 紫色 M（110-125斤)</p>
+                    <div style="display: flex;width: 175px;height: 26px;margin-top: 5px"><strong style="color: red">￥99</strong><div>看相似</div></div>
+                </div>
+                <div class="pian">
+                    <img src="https://img10.360buyimg.com/mobilecms/s372x372_jfs/t1/98609/15/18413/144178/5e95b7ccEa81fae71/79ddbbddee493ec4.jpg!q70.dpg.webp" alt="">
+                    <p style="width: 176px;height: 31px;overflow: hidden;text-overflow: ellipsis;font-size: 13px;white-space: normal">谷卓诗 圆领宽松百搭纯色棉短袖T恤女2020夏装新款 紫色 M（110-125斤)</p>
+                    <div style="display: flex;width: 175px;height: 26px;margin-top: 5px"><strong style="color: red">￥99</strong><div>看相似</div></div>
+                </div>
+                <div class="pian">
+                    <img src="https://img10.360buyimg.com/mobilecms/s372x372_jfs/t1/98609/15/18413/144178/5e95b7ccEa81fae71/79ddbbddee493ec4.jpg!q70.dpg.webp" alt="">
+                    <p style="width: 176px;height: 31px;overflow: hidden;text-overflow: ellipsis;font-size: 13px;white-space: normal">谷卓诗 圆领宽松百搭纯色棉短袖T恤女2020夏装新款 紫色 M（110-125斤)</p>
+                    <div style="display: flex;width: 175px;height: 26px;margin-top: 5px"><strong style="color: red">￥99</strong><div>看相似</div></div>
+                </div>
+                <div class="pian">
+                    <img src="https://img10.360buyimg.com/mobilecms/s372x372_jfs/t1/98609/15/18413/144178/5e95b7ccEa81fae71/79ddbbddee493ec4.jpg!q70.dpg.webp" alt="">
+                    <p style="width: 176px;height: 31px;overflow: hidden;text-overflow: ellipsis;font-size: 13px;white-space: normal">谷卓诗 圆领宽松百搭纯色棉短袖T恤女2020夏装新款 紫色 M（110-125斤)</p>
+                    <div style="display: flex;width: 175px;height: 26px;margin-top: 5px"><strong style="color: red">￥99</strong><div>看相似</div></div>
+                </div>
+                <div class="pian">
+                    <img src="https://img10.360buyimg.com/mobilecms/s372x372_jfs/t1/98609/15/18413/144178/5e95b7ccEa81fae71/79ddbbddee493ec4.jpg!q70.dpg.webp" alt="">
+                    <p style="width: 176px;height: 31px;overflow: hidden;text-overflow: ellipsis;font-size: 13px;white-space: normal">谷卓诗 圆领宽松百搭纯色棉短袖T恤女2020夏装新款 紫色 M（110-125斤)</p>
+                    <div style="display: flex;width: 175px;height: 26px;margin-top: 5px"><strong style="color: red">￥99</strong><div>看相似</div></div>
+                </div>
+                <div class="pian">
+                    <img src="https://img10.360buyimg.com/mobilecms/s372x372_jfs/t1/98609/15/18413/144178/5e95b7ccEa81fae71/79ddbbddee493ec4.jpg!q70.dpg.webp" alt="">
+                    <p style="width: 176px;height: 31px;overflow: hidden;text-overflow: ellipsis;font-size: 13px;white-space: normal">谷卓诗 圆领宽松百搭纯色棉短袖T恤女2020夏装新款 紫色 M（110-125斤)</p>
+                    <div style="display: flex;width: 175px;height: 26px;margin-top: 5px"><strong style="color: red">￥99</strong><div>看相似</div></div>
+                </div>
+                <div class="pian">
+                    <img src="https://img10.360buyimg.com/mobilecms/s372x372_jfs/t1/98609/15/18413/144178/5e95b7ccEa81fae71/79ddbbddee493ec4.jpg!q70.dpg.webp" alt="">
+                    <p style="width: 176px;height: 31px;overflow: hidden;text-overflow: ellipsis;font-size: 13px;white-space: normal">谷卓诗 圆领宽松百搭纯色棉短袖T恤女2020夏装新款 紫色 M（110-125斤)</p>
+                    <div style="display: flex;width: 175px;height: 26px;margin-top: 5px"><strong style="color: red">￥99</strong><div>看相似</div></div>
+                </div>
+                <div class="pian">
+                    <img src="https://img10.360buyimg.com/mobilecms/s372x372_jfs/t1/98609/15/18413/144178/5e95b7ccEa81fae71/79ddbbddee493ec4.jpg!q70.dpg.webp" alt="">
+                    <p style="width: 176px;height: 31px;overflow: hidden;text-overflow: ellipsis;font-size: 13px;white-space: normal">谷卓诗 圆领宽松百搭纯色棉短袖T恤女2020夏装新款 紫色 M（110-125斤)</p>
+                    <div style="display: flex;width: 175px;height: 26px;margin-top: 5px"><strong style="color: red">￥99</strong><div>看相似</div></div>
+                </div>
+                <div class="pian">
+                    <img src="https://img10.360buyimg.com/mobilecms/s372x372_jfs/t1/98609/15/18413/144178/5e95b7ccEa81fae71/79ddbbddee493ec4.jpg!q70.dpg.webp" alt="">
+                    <p style="width: 176px;height: 31px;overflow: hidden;text-overflow: ellipsis;font-size: 13px;white-space: normal">谷卓诗 圆领宽松百搭纯色棉短袖T恤女2020夏装新款 紫色 M（110-125斤)</p>
+                    <div style="display: flex;width: 175px;height: 26px;margin-top: 5px"><strong style="color: red">￥99</strong><div>看相似</div></div>
+                </div>
+            </div>
+    </div>
+    <div class="dingwei">
+        <ul>
+            <li><a href=""><span class="iconfont">&#xe63b;</span><br>首页</a></li>
+            <li><a href="fenlei.html"><span class="iconfont">&#xe743;</span><br>分类</a></li>
+            <li><a href="goumaidingdan.html"><span class="iconfont">&#xe674;</span><br>我的</a></li>
+            <li><a href=""><span class="iconfont">&#xe63c;</span><br>搜索</a></li>
+            <li><a href="login.html"><span class="iconfont">&#xe7aa;</span><br>用户</a></li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>

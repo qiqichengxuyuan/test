@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>商品详情</title>
+    <link rel="stylesheet" type="text/css" href="../css/iconfont.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no, viewport-fit=cover">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        a{
+            text-decoration: none;
+        }
+        #details{
+            /*width: 375px;*/
+            width: 375px;
+            height: 1500px;
+            /*border: solid 1px red;*/
+            background-color: gainsboro;
+        }
+        #details .fanhui{
+            /*width: 375px;*/
+            width: 375px;
+            height: 30px;
+            /*border: solid 1px #000000;*/
+            position: fixed;
+            top: 0;
+        }
+        #details .fanhui span:nth-child(1){
+            width: 50px;
+            height: 30px;
+            /*border: solid 1px #000000;*/
+            border-radius: 100px 100px;
+            background-color: #999999;
+           font-size: 30px;
+            color: white;
+            margin-left: 10px;
+            opacity: 0.6;
+        }
+        #details .top{
+            /*background-color: white;*/
+            /*width: 375px;*/
+            width: 375px;
+            height: 375px;
+            border: solid 1px red;
+            background-image: url("https://img10.360buyimg.com/mobilecms/s372x372_jfs/t1/98609/15/18413/144178/5e95b7ccEa81fae71/79ddbbddee493ec4.jpg!q70.dpg.webp");
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+        }
+        #details .top div{
+            border-radius: 100px 100px;
+            width: 20px;
+            height: 20px;
+            background-color: darkgray;
+            margin: 10px 0 0 10px;
+            text-align: center;
+        }
+        #details .content{
+            /*width: 375px;*/
+            width: 375px;
+            height: 182px;
+            /*border: solid 1px #000000;*/
+            /*background-color: #999999;*/
+            background-color: white;
+            border-radius: 0 0 10px 10px;
+        }
+        #details .content .money{
+            /*width: 375px;*/
+            width: 90%;
+            height: 45px;
+            /*border: solid 1px #000000;*/
+            /*background-color: #999999;*/
+            padding: 0 18px;
+        }
+        #details .money span:nth-child(1){
+            width: 116px;
+            /*height: 45px;*/
+            /*border: solid 1px #000000;*/
+            /*background-color: blue;*/
+            color: red;
+            font-size: 16px;
+            float: left;
+            /*margin-top: 12px;*/
+            padding-left: 10px;
+            margin: 4px 0 0;
+        }
+        #details .money span:nth-child(2),#details .money span:nth-child(3){
+            width: 40px;
+            height: 32px;
+            font-size: 9px;
+            padding: 9px 0 0;
+            float: right;
+            /*margin-right: 25px;*/
+            text-align: center;
+        }
+        /*图片*/
+        #details .money span img{
+            width: 20px;
+            height: 20px;
+        }
+        /*介绍*/
+        #details .content .jianjie{
+            width: 90%;
+            height: 105px;
+            /*border: solid 1px red;*/
+            padding: 12px 18px;
+        }
+        /*详情*/
+        #details .content .xiangqing{
+            width: 375px;
+            /*height: 36px;*/
+            /*border: solid 1px red;*/
+            font-size: 12px;
+            padding: 18px 0 0;
+
+        }
+        /*优惠*/
+        #details .discounts{
+            background-color: white;
+            width: 375px;
+            /*width: 339px;*/
+            height: 82px;
+            border-radius: 10px 10px 10px 10px;
+            margin-top: 10px;
+            padding: 0 18px;
+        }
+        #details .discounts .youhui{
+            font-size: 13px;
+            padding-top: 20px;
+            /*width: 375px;*/
+            width: 375px;
+            height: 20px;
+            font-weight: 800;
+        }
+        #details .discounts .youhui span{
+            font-size: 12px;
+            font-weight: 100;
+            border: solid 1px red;
+            margin-left: 10px;
+        }
+        #details .xuanze{
+            /*width: 375px;*/
+            width: 375px;
+            height: 223px;
+            background-color: white;
+            margin-top: 10px;
+            border-radius: 10px 10px 10px 10px;
+        }
+        #details .xuanze .num{
+            padding: 18px 0 ;
+        }
+        #details .xuanze .address{
+            padding: 18px 20px 18px 0 ;
+        }
+        #details .xuanze .zhong{
+            padding: 18px 20px 18px 0 ;
+        }
+        h5{
+            float: left;
+            margin-left: 20px;
+        }
+        #details .xuanze .num span{
+            font-size: 13px;
+        }
+        #details .xuanze >div span{
+            margin-left: 20px;
+            font-size: 13px;
+            font-weight: 400;
+        }
+        #details .xuanze .tuihuo img{
+            width: 11px;
+            height: 11px;
+            margin-left: 10px;
+        }
+        #details .xuanze .tuihuo span{
+            margin: 0;
+        }
+        #details .pinglun{
+            background-color: white;
+            border-radius: 10px 10px 10px 10px;
+            /*width: 375px;*/
+            width: 375px;
+            height: 200px;
+            margin-top: 10px;
+        }
+        #details .pinglun .shang{
+            padding: 10px 0 10px 0;
+        }
+        #details .pinglun .shang h4{
+            margin-left: 20px;
+            float: left;
+        }
+        #details .pinglun .shang span{
+            float: right;
+            margin-right: 20px;
+            font-size: 12px;
+        }
+        #details .pinglun .tottom{
+            margin-top: 20px;
+            /*width: 375px;*/
+            width: 375px;
+            height: 62px;
+            /*border: solid 1px red;*/
+        }
+        #details .pinglun .tottom span{
+           margin-left: 20px;
+        }
+        /*#details .gengduo{*/
+            /*margin-top: 10px;*/
+            /*width: 100%;*/
+            /*height: 80%;*/
+            /*background-color: white;*/
+            /*border-radius: 10px 10px 10px 10px;*/
+        /*}*/
+
+        #details .dingwei{
+            width: 100%;
+        }
+        #details .dingwei ul{
+            width: 375px;
+            height: 50px;
+            display: flex;
+            list-style: none;
+            position: fixed;
+            bottom: 0;
+            line-height: 20px;
+            text-align: center;
+        }
+        #details .dingwei ul li{
+            flex: 1;
+            /*border: solid 1px #000000;*/
+            font-size: 12px;
+            text-align: center;
+            background-color: white;
+            float: left;
+
+        }
+        #details .dingwei ul li span{
+
+            font-size: 20px;
+            text-align: center;
+            line-height: 27px;
+        }
+
+        #details .dingwei ul li:nth-child(4){
+            flex: 2;
+            width: 100px;
+            height: 100%;
+        }
+
+        #details .dingwei ul li:nth-child(4) .car{
+            border-radius: 70px 70px ;
+            background-color: red;
+            color: white;
+            width: 100px;
+            height: 30px;
+            margin-top: 10px;
+            line-height: 30px;
+        }
+        #details .dingwei ul li:nth-child(4) .car span{
+          font-size: 15px;
+        }
+
+        #details .dingwei ul li:nth-child(5){
+            flex: 2;
+            width: 100px;
+            height: 100%;
+        }
+        #details .dingwei ul li:nth-child(5) div{
+            border-radius: 70px 70px ;
+            background-color: orange;
+            color: white;
+            width: 100px;
+            height: 30px;
+            margin-top: 10px;
+            line-height: 30px;
+        }
+        #details .dingwei ul li:nth-child(5) div span{
+            font-size: 15px;
+        }
+
+        #details .dingwei  #xinyemian{
+            width: 375px;
+            height: 555px;
+            border-radius: 10px 10px 10px 10px;
+            background-color: white;
+            position: absolute;
+            top: -500px;
+            left: 0;
+            display: none;
+            z-index: 10;
+        }
+        #details .dingwei ul .car:hover #xinyemian{
+            display: block;
+        }
+
+        #details .dingwei ul .car #xinyemian .dingbu{
+            width: 375px;
+            height: 118px;
+            /*background-color: bisque;*/
+        }
+        #details .dingwei ul .car #xinyemian .dingbu{
+            display: flex;
+            text-align: center;
+        }
+        #details .dingwei ul .car #xinyemian .dingbu .imgs{
+            flex: 1;
+            background-image: url("https://img10.360buyimg.com/mobilecms/s372x372_jfs/t1/98609/15/18413/144178/5e95b7ccEa81fae71/79ddbbddee493ec4.jpg!q70.dpg.webp");
+            background-size: 100px 100px;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        #details .dingwei ul .car #xinyemian .dingbu .span{
+            flex: 2;
+        }
+        #details .dingwei ul .car #xinyemian .chicun h3{
+            color: black;
+            float: left;
+            margin-left: 0;
+            line-height: 39px;
+        }
+        input {
+            border: solid 2px;
+            text-align: center;
+        }
+        #details .dingwei ul .car #xinyemian  .queding{
+            width: 100%;
+            height: 50px;
+            border: solid 1px red;
+            font-size: 20px;
+            text-align: center;
+            border-radius: 70px 70px 70px 70px;
+            color: white;
+            background-color: red;
+            font-weight: 500;
+            line-height: 50px;
+            position: fixed;
+            bottom: 0;
+        }
+        a{
+            color: black;
+            text-decoration: none;
+        }
+        input{
+            border: none;
+            line-height: 20px;
+        }
+
+    </style>
+</head>
+<body>
+<div id="details">
+    <div class="fanhui">
+        <a href="jdshopping.html"><span class="iconfont">&#xe744;</span></a>
+        <span class="iconfont" style="opacity:0.7;margin-left: 290px;font-size: 30px;border-radius: 100px 100px;width: 50px;height: 30px;color: white;background-color: #999999">&#xe74f;</span>
+    </div>
+    <div class="top"></div>
+    <div class="content">
+        <div class="money">
+            <span>￥<strong style="width:81px;height:36px;font-size: 30px">99</strong>.00</span>
+            <span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAMAAADW3miqAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAA2UExURUdwTCYmJiYmJicnJyYmJioqKiYmJiYmJiYmJiYmJjAwMCkpKSYmJiYmJicnJygoKCYmJiYmJjcsgYIAAAARdFJOUwDz2UbBFun6moYGJm2yUzF733ih6QAAATZJREFUOMu1VEmChCAMlH1X+f9nJ0F2Y98ml7ZDUZUUgeP4l/DCJc4Y48kJT0OCZXkEs+ENUTbvYdWGOTWmuT0v5dV1Wo5/9blgIuakmDJCYipOmRu3iY1cIPk9tJBGvctEsqYYDGColj2gTG0SPrkiXVFQv2xiDR61K79OxyFyViJbd+rnEyzTNWMfqgBETcyhhbiQXRMEqlAsSr0IXOd5UB9HKmalxbLncOxiM3DAxqupmX5upuldQF2KbSUtU9CKKk3Aiv/B5OG7gBYnAbH4WUinmijQUxN018+/63W12t2lUz9c9qp7c4hmqo7vsdZk2xisYbDlYxo1QYAcc8Q8bQvbZLJASqwzHr8MJG8LMOX9Ijz3bsLgBN8DNW7w0tidiTD7WyBfEE28Krccs6S5/HyfvuMPfMwYr7KlhxoAAAAASUVORK5CYII=" alt=""><br>收藏</span>
+            <span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAMAAADW3miqAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAA2UExURUdwTCYmJiYmJicnJyYmJioqKiYmJiYmJiYmJiYmJjAwMCkpKSYmJiYmJicnJygoKCYmJiYmJjcsgYIAAAARdFJOUwDz2UbBFun6moYGJm2yUzF733ih6QAAATZJREFUOMu1VEmChCAMlH1X+f9nJ0F2Y98ml7ZDUZUUgeP4l/DCJc4Y48kJT0OCZXkEs+ENUTbvYdWGOTWmuT0v5dV1Wo5/9blgIuakmDJCYipOmRu3iY1cIPk9tJBGvctEsqYYDGColj2gTG0SPrkiXVFQv2xiDR61K79OxyFyViJbd+rnEyzTNWMfqgBETcyhhbiQXRMEqlAsSr0IXOd5UB9HKmalxbLncOxiM3DAxqupmX5upuldQF2KbSUtU9CKKk3Aiv/B5OG7gBYnAbH4WUinmijQUxN018+/63W12t2lUz9c9qp7c4hmqo7vsdZk2xisYbDlYxo1QYAcc8Q8bQvbZLJASqwzHr8MJG8LMOX9Ijz3bsLgBN8DNW7w0tidiTD7WyBfEE28Krccs6S5/HyfvuMPfMwYr7KlhxoAAAAASUVORK5CYII=" alt=""><br>降价提醒</span>
+        </div>
+        <div class="jianjie">
+            <div style="width: 100%;height: 62px;">
+            <span style="font-size: 13px;border-radius: 80px 80px 80px 80px;background-color: red;color: white">热卖</span>&nbsp;厂家直销(GUZHUOSHI) 女士衬衫 你买不了吃亏买不了上当 全是批发价格 你值得拥有
+            </div>
+            <div class="xiangqing">
+                <span>【7.22-29日】直降50元！限时抢购(GUZHUOSHI)，正版宽松休闲衬衫！下单有礼！视频晒单返卡200，免费安装【<span style="color: red;text-decoration: underline">查看></span>】 </span>
+            </div>
+        </div>
+    </div>
+    <div class="discounts">
+        <div class="youhui">
+            优惠  <span>满30减6</span><span>满99减15</span><span style="font-weight: 800;color: white;background-color: red">新用户专享</span>
+            <span style="font-weight: 600;float:right;margin-right:30px;">···</span><br>
+            <span style="float: left;margin-left: 40px;margin-top: 10px">满减</span><span style="font-weight:400;float: left;margin-top: 10px;border: 0;font-size: 13px;">满5999元减199元</span>
+        </div>
+    </div>
+    <div class="xuanze">
+        <div class="num">
+            <h5>已选</h5>
+            <span>紫色衬衫L号码        ×1</span>
+        </div>
+        <div class="address"><h5>地址</h5><span>河北省保定市</span><br><span style="color: red;margin-left: 66px">现货</span><span style="font-size: 12px;font-weight: 300;margin: 0;">24小时内发货</span></div>
+        <div class="zhong"><h5>重量</h5><span>不计重量</span></div>
+        <div class="tuihuo">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAMAAADzapwJAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAA8UExURUdwTPMoDPInDPInDP87NPosE/MnDPInDPInDPcpD/UoDvInDPMnDvInDPIoDPInDPInDPQoDfInDPInDDAotc8AAAATdFJOUwBkjOUEEbD13iE0zkCQfpN5S3Nig6CDAAAAsklEQVQY02WRiw7DIAhFobOC2tou9///ddTXnCPGhKO8LkTFdvYqop53+pq7BYCq3XIMGhJki86e46kDhxf8HNsyJFzkJhD48W74n28WfFsPImGhkJ0Y50K3E0wecaEULa2KWyg5UbJDdKTjS8m+Nlym6/TBNQkbH9RBe0njnZaS3BxGp7RZgzZOFeTNTYxK8jK8pc1dqskupDJJ0EnY4KHhfw2CNJRz+VlXXVqepV9X/AHuSwhEt5a/JQAAAABJRU5ErkJggg==" alt="">
+        <span>厂商发货配送</span>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAMAAADzapwJAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAA8UExURUdwTPMoDPInDPInDP87NPosE/MnDPInDPInDPcpD/UoDvInDPMnDvInDPIoDPInDPInDPQoDfInDPInDDAotc8AAAATdFJOUwBkjOUEEbD13iE0zkCQfpN5S3Nig6CDAAAAsklEQVQY02WRiw7DIAhFobOC2tou9///ddTXnCPGhKO8LkTFdvYqop53+pq7BYCq3XIMGhJki86e46kDhxf8HNsyJFzkJhD48W74n28WfFsPImGhkJ0Y50K3E0wecaEULa2KWyg5UbJDdKTjS8m+Nlym6/TBNQkbH9RBe0njnZaS3BxGp7RZgzZOFeTNTYxK8jK8pc1dqskupDJJ0EnY4KHhfw2CNJRz+VlXXVqepV9X/AHuSwhEt5a/JQAAAABJRU5ErkJggg==" alt="">
+            <span>7天内无理由退货</span>
+        </div>
+    </div>
+    <div class="pinglun">
+        <div class="shang">
+            <h4>问答</h4>
+            <span>查看全部回答></span>
+        </div>
+        <div class="tottom">
+            <span>西瓜味de小彩霞</span>
+            <p>这件衣服太完美了！一点瑕疵都没有，非常喜欢，已经收藏店铺，五星好评！！</p>
+        </div>
+        <div class="tottom">
+            <span>西瓜味de小彩霞</span>
+            <p>这件衣服太完美了！一点瑕疵都没有，非常喜欢，已经收藏店铺，五星好评！！</p>
+        </div>
+    </div>
+    <div class="dingwei">
+        <ul>
+            <li><span class="iconfont">&#xe602;</span><br><span style="font-size: 12px;line-height: 0">客服</span></li>
+            <li><span class="iconfont">&#xe76f;</span><br><span style="font-size: 12px;line-height: 0">店铺</span></li>
+            <li><a href="goodscar.html"><span class="iconfont">&#xe63b;</span><br><span style="font-size: 12px;line-height: 0">购物车</span></a></li>
+            <li>
+                <div class="car"><span>加入购物车</span>
+                    <div id="xinyemian">
+                        <div class="dingbu">
+                            <div class="imgs"></div>
+                            <div class="span">
+                                <span class="iconfont" style="width: 20px;height: 20px;border-radius: 50px 50px;background-color: #999999;float: right;margin: 10px 20px 0 0;text-align: center;font-size: 14px;line-height: 20px">&#xe668;</span><br>
+                                <span style=" float:left;width:84px;height:40px;color: red;font-size: 12px;text-align: left">￥<strong style="font-size: 24px;">99</strong>.00</span>
+                                <span style="float: left;color: black;font-size: 12px;">已选紫色女士衬衫潮流款  L号  ×1件</span>
+                            </div>
+                        </div>
+                        <div style="color: black;width: 375px;height: 100px">
+                            <span style="float: left;font-weight: 600;padding-left: 20px;padding-right: 10px">颜色</span><br>
+                            <p style="color: black;display: flex;">
+                                <span style="margin-left: 20px;margin-top: 10px;width: 50px;height: 30px;border-radius: 80px 80px 80px 80px;background-color: #999999">紫色</span>
+                                <span style="margin-left: 20px;margin-top: 10px;width: 50px;height: 30px;border-radius: 80px 80px 80px 80px;background-color: #999999">黑色</span>
+                                <span style="margin-left: 20px;margin-top: 10px;width: 50px;height: 30px;border-radius: 80px 80px 80px 80px;background-color: #999999">白色</span>
+                            </p>
+                        </div>
+                        <div style="color: black;width: 375px;height: 100px">
+                            <span style="float: left;font-weight: 600;padding-left: 20px;padding-right: 10px">尺寸</span><br>
+                            <p style="color: black;display: flex;">
+                                <span style="margin-left: 20px;margin-top: 10px;width: 50px;height: 30px;border-radius: 80px 80px 80px 80px;background-color: #999999">M</span>
+                                <span style="margin-left: 20px;margin-top: 10px;width: 50px;height: 30px;border-radius: 80px 80px 80px 80px;background-color: #999999">L</span>
+                                <span style="margin-left: 20px;margin-top: 10px;width: 50px;height: 30px;border-radius: 80px 80px 80px 80px;background-color: #999999">XL</span>
+                            </p>
+                        </div>
+                        <div style="color: black;width: 375px;height: 100px">
+                            <span style="float: left;font-weight: 600;padding-left: 20px;padding-right: 10px;line-height: 100px">数量</span>
+                            <!---->
+                            <span style="float: right;width: 50px;margin-top: 35px;margin-right: 70px;height: 30px;display: flex;"><input type="number" max="10" min="1" placeholder="1"><h3>+</h3></span>
+                        </div>
+                        <div class="queding">
+                           确定
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li><div><span>立即购买</span></div></li>
+        </ul>
+
+    </div>
+    <!--<div class="gengduo">-->
+
+    <!--</div>-->
+
+</div>
+</body>
+</html>

@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>订单列表</title>
+    <link rel="stylesheet" type="text/css" href="../css/iconfont.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no, viewport-fit=cover">
+    <style>
+        html,body{
+            width: 100%;
+            height: 100%;
+        }
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        #dingdan{
+            width: 100%;
+            height: 1000px;
+            background-color: #999999;
+        }
+        #dingdan .fanhui{
+            /*width: 375px;*/
+            width: 100%;
+            height: 30px;
+            /*border: solid 1px #000000;*/
+            display: flex;
+            padding-top: 10px;
+            background-color: white;
+        }
+        a{
+            text-decoration: none;
+        }
+        #dingdan .fanhui .title{
+            font-size: 20px;
+            width: 80px;
+            height: 30px;
+            margin-left: 100px;
+        }
+        #dingdan .address{
+            width: 100%;
+            height: 40px;
+            /*border: solid 1px red;*/
+            display: flex;
+            background-color: white;
+        }
+        #dingdan .address span{
+            width: 100px;
+            height: 30px;
+            /*border: solid 1px #000000;*/
+            font-size: 15px;
+            text-align: left;
+            line-height: 25px;
+            margin-left: 10px;
+            margin-top: 10px;
+        }
+        #dingdan .address span:nth-child(1){
+            width: 30px;
+            height: 25px;
+            /*border: solid 1px #000000;*/
+            margin-left: 30px;
+            background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAMAAAC7IEhfAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAhUExURUdwTM7Ozs3Nzc3Nzc7Ozs3NzdbW1s3Nzc3NzdHR0czMzPvJf4cAAAAKdFJOUwA46tVSdgy3mSArXJXMAAAA20lEQVQ4y41UWw4EIQgTUFTuf+DdTWZ9jEUl8Yc0lFYghCk0lixsLDnV4Adle4K/T6IDqw3W4BAaDURacclg5EucWXnJMDfmPsUHst4QvwWNBQupUhlLwg6ZnhT3HCHmf1IJcWdkRmfPurZIqB9pud7PYIUCNbYHGqgIqflazM6eAO2hdVYjNHz/hXKabjQUuhuz88LAtckeTsLlLtB7u8rlFjp6GBwWOq/gUzLdEGPyaVPHK8UnxU6byT+QaXN1XDdFd8D+lVy3uCadKRyiius0MukC96vJaRXyAbL3Hge5swSbAAAAAElFTkSuQmCC");
+            background-size: 100% 100%;
+        }
+        #dingdan .address span:nth-child(3){
+            width: 30px;
+            height: 30px;
+            /*border: solid 1px #000000;*/
+           margin-left: 100px;
+        }
+        #dingdan .goods{
+            width: 100%;
+            height: 40px;
+            /*border: solid 1px red;*/
+            background-color: white;
+        }
+        #dingdan .goods span{
+            font-size: 20px;
+            line-height: 40px;
+        }
+        #dingdan .zhong{
+            background-color: white;
+        }
+        #dingdan .zhong span{
+            font-size: 12px;
+        }
+        #dingdan .zhong .bo{
+            /*display: flex;*/
+            width: 100%;
+            height: 130px;
+            /*border: solid 1px red;*/
+            /*margin-top: 18px;*/
+            display: flex;
+        }
+        #dingdan .zhong .bo .imgs{
+            width: 100px;
+            height: 100px;
+            border: solid 1px black;
+            background-image: url("https://img10.360buyimg.com/mobilecms/s372x372_jfs/t1/98609/15/18413/144178/5e95b7ccEa81fae71/79ddbbddee493ec4.jpg!q70.dpg.webp");
+            background-size: 100px 100px;
+            margin-left: 25px;
+            margin-top: 5px;
+        }
+        #dingdan .zhong .bo .a{
+            width: 195px;
+            height: 120px;
+            /*border: solid 1px black;*/
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+        #dingdan .zhong .bo .a .b{
+            width: 195px;
+            height: 35px;
+            /*border: solid 1px red;*/
+            font-size: 13px;
+            display: -webkit-box;
+            overflow: hidden;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp:2;
+        }
+        #dingdan .zhong .bo .a .c{
+            width: 175px;
+            height: 16px;
+            /*border: solid 1px red;*/
+            font-size: 10px;
+            margin-top: 10px;
+            color: #999999;
+        }
+        #dingdan .zhong .bo .a .d{
+            /*width: 68px;*/
+            height: 16px;
+            /*border: solid 1px red;*/
+            font-size: 13px;
+            margin-top: 10px;
+            color: #999999;
+        }
+        #dingdan .zhong .bo .a .d span{
+            width: 68px;
+            height: 16px;
+            /*border: solid 1px red;*/
+            margin-top: 10px;
+        }
+        #dingdan .zhong .bo .a .d span img{
+           width: 16px;
+            height: 15px;
+        }
+        #dingdan .zhong .bo .a .e{
+            width: 100%;
+            height: 17px;
+            /*border: solid 1px red;*/
+        }
+        #dingdan .zhong .bo .a .e strong{
+            color: red;
+            font-size: 13px;
+        }
+        #dingdan .zhong .bo .a .e input{
+            width: 36px;
+            height: 15px;
+            text-align: center;
+            float: right;
+            margin-top: 7px;
+        }
+        input  {
+            border: none;
+        }
+        #dingdan .song{
+            width: 100%;
+            height: 50px;
+            text-align: center;
+            background-color: white;
+            border-radius: 0 0 10px 10px;
+        }
+        #dingdan .song div:nth-child(1){
+            height: 20px;
+        }
+        #dingdan .song div:nth-child(1) span{
+            height: 20px;
+            /*border: solid 1px red;*/
+            float: left;
+            font-size: 20px;
+            margin-left: 10px;
+        }
+        #dingdan .song div:nth-child(1) span:nth-child(2){
+            height: 20px;
+            font-size: 12px;
+            float: right;
+            margin-right: 15px;
+            margin-top: 10px;
+        }
+        #dingdan .song div:nth-child(2) span{
+            width: 100%;
+            height: 20px;
+
+        }
+        #dingdan .song div:nth-child(2) span:nth-child(1){
+            width: 85px;
+            height: 20px;
+            float: left;
+           font-size: 12px;
+            margin-top: 5px;
+            margin-left: 20px;
+            color: #999999;
+        }
+        #dingdan .song div:nth-child(2) span:nth-child(2){
+            width: 112px;
+            height: 20px;
+            font-size: 12px;
+            float: right;
+            color: #999999;
+            margin-top: 5px;
+            margin-right: 0;
+        }
+        #dingdan .money{
+            width: 100%;
+            height: 50px;
+            /*border: solid 1px red;*/
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 10px 10px 0 0;
+            background-color: white;
+        }
+        #dingdan .money .yingfu{
+            width: 100%;
+            height: 25px;
+            /*border: solid 1px red;*/
+        }
+        #dingdan .money .yingfu .a{
+            width: 308px;
+            height: 25px;
+            /*border: solid 1px red;*/
+            font-size: 13px;
+        }
+        #dingdan .money .yingfu .b{
+            /*width: 308px;*/
+            height: 25px;
+            /*border: solid 1px red;*/
+            font-size: 13px;
+            color: red;
+            float: right;
+            margin-right: 20px;
+            line-height: 20px;
+        }
+        #dingdan .shifu {
+            width: 100%;
+            height: 30px;
+            /*border: solid 1px red;*/
+            background-color: white;
+        }
+        #dingdan .shifu span:nth-child(1){
+            float: right;
+            font-size: 20px;
+            font-weight: 800;
+            color: red;
+            margin-right: 20px;
+        }
+        #dingdan .shifu span:nth-child(2){
+           float: right;
+            font-size: 20px;
+        }
+        #dingdan .zhifu{
+            width: 100%;
+            height: 50px;
+            background-color: white;
+            padding-top: 10px;
+        }
+        #dingdan .zhifu .aa{
+            width: 90%;
+            height: 35px;
+            border-radius: 70px 70px 70px 70px;
+            background-color: blue;
+            font-size: 20px;
+            text-align: center;
+            color: white;
+            line-height: 30px;
+            margin-left: 15px;
+        }
+        #dingdan .bo{
+            background-color: white;
+            width: 100%;
+            height: 1000px;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<div id="dingdan">
+    <div class="fanhui">
+        <a href="goodscar.html"><span style=" width: 50px; height: 30px; font-size: 30px; margin-left: 10px; opacity: 0.6;" class="iconfont">&#xe744;</span></a>
+        <span class="title">购买支付</span>
+        <!--<span class="iconfont" style="opacity:0.7;margin-left: 100px;font-size: 30px;width: 30px;height: 30px;">&#xe74f;</span>-->
+    </div>
+    <div class="address">
+        <span></span>
+        <span>添加收货地址</span>
+        <span>></span>
+    </div>
+    <div class="goods">
+        <span class="iconfont">&#xe76f;</span>
+    </div>
+    <div class="zhong">
+        <div class="bo">
+            <div class="imgs"></div>
+            <div class="a">
+                <div class="b">女士服装店春夏秋潮流款纯棉线女士宽松衬衫原价200元现价99速速抢购</div>
+                <div class="c">紫色，L号爆款女士衬衫 </div>
+                <div class="e">
+                    <span>￥<strong>99</strong>.00</span>
+                    <input type="number" placeholder="×1">
+                </div>
+                <div class="d"><span><img src="https://img11.360buyimg.com/jdphoto/s30x30_jfs/t25519/350/1027017591/1489/1f3feea4/5b863011Ne924273f.png" alt=""></span>不支持七天无理由退货</div>
+            </div>
+        </div>
+    </div>
+    <div class="song">
+        <div>
+            <span>配送</span>
+            <span>顺丰快递</span>
+        </div>
+        <div>
+            <span>中小件送货时间</span>
+            <span>周一至周五均可送货</span>
+        </div>
+    </div>
+    <div class="money">
+        <div class="yingfu">
+            <span class="a">商品金额</span><span class="b">￥99.00</span>
+        </div>
+        <div class="yingfu">
+            <span class="a">运费</span><span class="b">￥00.00</span>
+        </div>
+    </div>
+    <div class="shifu">
+        <span>￥99.00</span>
+        <span>实付金额:</span>
+    </div>
+    <div class="zhifu">
+        <div class="aa"><a href="jdshopping.html">在线支付</a></div>
+    </div>
+    <div class="bo"></div>
+</div>
+</body>
+</html>

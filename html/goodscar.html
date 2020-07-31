@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>购物车</title>
+    <link rel="stylesheet" type="text/css" href="../css/iconfont.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no, viewport-fit=cover">
+    <style>
+        html,body{
+            width: 100%;
+            height: 100%;
+        }
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        #car{
+            width: 100%;
+            height: 1000px;
+            border: solid 1px red;
+            background-color: gainsboro;
+        }
+        #car .fanhui{
+            /*width: 375px;*/
+            width: 100%;
+            height: 30px;
+            /*border: solid 1px #000000;*/
+            display: flex;
+            padding-top: 10px;
+            background-color: white;
+        }
+        a{
+            text-decoration: none;
+        }
+        #car .fanhui .title{
+            font-size: 20px;
+            width: 60px;
+            height: 30px;
+            margin-left: 120px;
+        }
+        #car .address{
+            width: 100%;
+            height: 50px;
+            /*border: solid 1px red;*/
+            display: flex;
+            text-align: center;
+            line-height: 48px;
+            font-size: 15px;
+            background-color: white;
+            border-radius: 0 0 10px 10px;
+        }
+        #car .address .left{
+            flex: 2;
+            /*border: solid 1px #000000;*/
+            text-align: left;
+            padding-left: 30px;
+        }
+        #car .address .left img{
+           width: 10px;
+            height: 10px;
+            background-repeat: no-repeat;
+
+        }
+        #car .address .right{
+           flex: 1;
+            /*border: solid 1px #000000;*/
+        }
+        #car .dianpu{
+            width: 100%;
+            height: 238px;
+            /*border: solid 1px red;*/
+            margin-top: 10px;
+            border-radius: 10px 10px 10px 10px;
+            background-color: white;
+
+        }
+        #car .dianpu .top{
+            width: 100%;
+            height: 30px;
+            /*border: solid 1px red;*/
+        }
+
+        #car .dianpu .top span{
+            line-height: 28px;
+            margin-left: 42px;
+            text-align: left;
+            font-size: 13px;
+            font-weight: 800;
+        }
+        #car .zhong span{
+            font-size: 12px;
+        }
+        #car .zhong .bo{
+            /*display: flex;*/
+            width: 100%;
+            height: 130px;
+            /*border: solid 1px red;*/
+            margin-top: 18px;
+            display: flex;
+        }
+        #car .zhong .bo .imgs{
+            width: 100px;
+            height: 100px;
+            border: solid 1px black;
+            background-image: url("https://img10.360buyimg.com/mobilecms/s372x372_jfs/t1/98609/15/18413/144178/5e95b7ccEa81fae71/79ddbbddee493ec4.jpg!q70.dpg.webp");
+            background-size: 100px 100px;
+            margin-left: 25px;
+            margin-top: 5px;
+        }
+        #car .zhong .bo .a{
+            width: 195px;
+            height: 120px;
+            /*border: solid 1px black;*/
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+        #car .zhong .bo .a .b{
+            width: 195px;
+            height: 35px;
+            /*border: solid 1px red;*/
+            font-size: 13px;
+            display: -webkit-box;
+            overflow: hidden;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp:2;
+        }
+        #car .zhong .bo .a .c{
+            width: 175px;
+            height: 16px;
+            /*border: solid 1px red;*/
+            font-size: 10px;
+            background-color: gainsboro;
+            border-radius: 50px 50px;
+            margin-top: 10px;
+        }
+        #car .zhong .bo .a .d{
+            width: 68px;
+            height: 16px;
+            /*border: solid 1px red;*/
+            font-size: 10px;
+            background-color: gainsboro;
+            border-radius: 50px 50px;
+            margin-top: 10px;
+        }
+        #car .zhong .bo .a .e{
+            width: 100%;
+            height: 17px;
+            /*border: solid 1px red;*/
+
+        }
+        #car .zhong .bo .a .e strong{
+           color: red;
+            font-size: 13px;
+        }
+        #car .zhong .bo .a .e input{
+           width: 36px;
+            height: 15px;
+            /*background-color: gainsboro;*/
+            /*border: solid 1px red;*/
+            text-align: center;
+            float: right;
+        }
+        #car .zhong .bo .a .e .f{
+            width: 10px;
+            height: 15px;
+            /*background-color: gainsboro;*/
+            /*border: solid 1px red;*/
+            text-align: center;
+            float: right;
+            line-height: 10px;
+        }
+
+        #car .goods{
+            width: 100%;
+            height: 600px;
+            background-color: white;
+            border-radius: 10px 10px 10px 10px;
+            margin-top: 10px;
+
+        }
+        #car .goods .tu {
+           display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-content: space-between;
+
+        }
+        #car .goods .tu .pian{
+            width: 180px;
+            height: 248px;
+            /*border: 1px solid red;*/
+            text-align: center;
+        }
+        #car .goods .tu .pian img{
+            width: 157px;
+            height: 157px;
+            margin-top: 10px;
+        }
+        #car .goods .tu .pian p{
+            display: -webkit-box;
+            overflow: hidden;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp:2;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        #car .dingwei{
+            width: 100%;
+            height: 50px;
+            background-color: white;
+            border-radius: 10px 10px 0 0;
+            position: fixed;
+            bottom: 0;
+        }
+        #car .dingwei div{
+            display: flex;
+        }
+        #car .dingwei div .c{
+            width: 68px;
+            height: 50px;
+            text-align: left;
+            line-height: 50px;
+            margin-left: 20px;
+
+        }
+
+        #car .dingwei div .a{
+            width: 165px;
+            height: 50px;
+            font-size: 15px;
+            margin-left: 100px;
+            line-height: 50px;
+        }
+        #car .dingwei div .b{
+            width: 113px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            border-radius: 70px 70px 70px 70px;
+            background-color: red;
+            color: white;
+        }
+        input{
+            border: none;
+        }
+    </style>
+</head>
+<body>
+<div id="car">
+    <div class="fanhui">
+        <a href="goodsdetails.html"><span style=" width: 50px; height: 30px; font-size: 30px; margin-left: 10px; opacity: 0.6;" class="iconfont">&#xe744;</span></a>
+        <span class="title">购物车</span>
+        <span class="iconfont" style="opacity:0.7;margin-left: 100px;font-size: 30px;width: 30px;height: 30px;">&#xe74f;</span>
+    </div>
+    <div class="address">
+        <div class="left">
+            <img src="https://wq.360buyimg.com/wxsq_trade/cart/main/images/sprite.img_default_437_16ed632a.png" alt="">
+            <span>河北省保定市竞秀区</span>
+        </div>
+        <div class="right">编辑资料</div>
+    </div>
+    <div class="dianpu">
+        <div class="top">
+            <span>服饰专卖店  ></span>
+        </div>
+
+        <div class="zhong">
+            <span><strong style="border: solid 1px red;background-color: red;color: white;margin-left: 30px">满减</strong>满666元减200元</span>
+            <span>去凑单 ></span><br>
+            <div class="bo">
+                <div class="imgs"></div>
+                <div class="a">
+                    <div class="b">女士服装店春夏秋潮流款纯棉线女士宽松衬衫原价200元现价99速速抢购</div>
+                    <div class="c">紫色，L号女士衬衫   选规格></div>
+                    <div class="d">满200元减20</div>
+                    <div class="e">
+                        <span>￥<strong>99</strong>.00</span>
+                        <span class="f"><h2>+</h2></span>
+                        <input type="number" placeholder="1">
+
+                    </div>
+                </div>
+            </div>
+            <div style="float: right;font-size: 12px;margin-right: 10px;margin-top: 10px">删除</div>
+        </div>
+    </div>
+    <div class="goods">
+        <span style="margin-left: 140px">---为您推荐----</span>
+        <div class="tu">
+            <div class="pian">
+                <a href="goodsdetails.html"><img  src="https://img14.360buyimg.com/n7/jfs/t1/136390/22/1971/197993/5ee0fe48E0fa2d6af/fbaaa0a7db2b594e.jpg!q70.dpg.webp" alt="">
+                    <p style="width: 176px;height: 31px;overflow: hidden;text-overflow: ellipsis;font-size: 13px;white-space: normal">
+                        坦野潮牌大码男装加肥加大宽松休闲男士短袖撞色拼接个性印花T恤 t20296黑色 2XL【165-185斤】
+                    </p>
+                    <div style="display: flex;width: 175px;height: 26px;margin-top: 5px"><strong style="color: red">￥99</strong></div>
+                </a>
+            </div>
+            <div class="pian">
+                <a href="goodsdetails.html"><img  src="https://img14.360buyimg.com/n7/jfs/t1/136390/22/1971/197993/5ee0fe48E0fa2d6af/fbaaa0a7db2b594e.jpg!q70.dpg.webp" alt="">
+                    <p style="width: 176px;height: 31px;overflow: hidden;text-overflow: ellipsis;font-size: 13px;white-space: normal">
+                        坦野潮牌大码男装加肥加大宽松休闲男士短袖撞色拼接个性印花T恤 t20296黑色 2XL【165-185斤】
+                    </p>
+                    <div style="display: flex;width: 175px;height: 26px;margin-top: 5px"><strong style="color: red">￥99</strong></div>
+                </a>
+            </div>
+            <div class="pian">
+                <a href="goodsdetails.html"><img  src="https://img14.360buyimg.com/n7/jfs/t1/136390/22/1971/197993/5ee0fe48E0fa2d6af/fbaaa0a7db2b594e.jpg!q70.dpg.webp" alt="">
+                    <p style="width: 176px;height: 31px;overflow: hidden;text-overflow: ellipsis;font-size: 13px;white-space: normal">
+                        坦野潮牌大码男装加肥加大宽松休闲男士短袖撞色拼接个性印花T恤 t20296黑色 2XL【165-185斤】
+                    </p>
+                    <div style="display: flex;width: 175px;height: 26px;margin-top: 5px"><strong style="color: red">￥99</strong></div>
+                </a>
+            </div>
+            <div class="pian">
+                <a href="goodsdetails.html"><img  src="https://img14.360buyimg.com/n7/jfs/t1/136390/22/1971/197993/5ee0fe48E0fa2d6af/fbaaa0a7db2b594e.jpg!q70.dpg.webp" alt="">
+                    <p style="width: 176px;height: 31px;overflow: hidden;text-overflow: ellipsis;font-size: 13px;white-space: normal">
+                        坦野潮牌大码男装加肥加大宽松休闲男士短袖撞色拼接个性印花T恤 t20296黑色 2XL【165-185斤】
+                    </p>
+                    <div style="display: flex;width: 175px;height: 26px;margin-top: 5px"><strong style="color: red">￥99</strong></div>
+                </a>
+            </div>
+        </div>
+        <div class="dingwei">
+            <div>
+                <span class="c">全选</span>
+                <span class="a">总计:￥99.00</span>
+               <span class="b"> <a href="dingdan.html" style="color: white">去结算</a></span>
+            </div>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>

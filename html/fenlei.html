@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>分类</title>
+    <link rel="stylesheet" type="text/css" href="../css/iconfont.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no, viewport-fit=cover">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        #fenlei{
+            width: 375px;
+            height: 1000px;
+            /*border: solid 1px #000000;*/
+        }
+        #fenlei .top{
+            width: 375px;
+            height: 44px;
+            /*border: solid 1px red;*/
+            display: flex;
+        }
+        #fenlei .top .fanhui{
+            width: 40px;
+            height: 44px;
+            /*border: solid 1px red;*/
+            font-size: 25px;
+            text-align: center;
+        }
+        #fenlei .top .sousuo{
+            width: 250px;
+            height: 30px;
+            /*border: solid 1px red;*/
+            padding: 0 10px 0 10px;
+            margin-top: 5px;
+            line-height: 20px;
+            border-radius: 70px 70px;
+            background-color: gainsboro;
+            display: flex;
+        }
+        #fenlei .top .sousuo div:nth-child(1){
+            /*width: 20px;*/
+            /*height: 20px;*/
+            /*border: solid 1px red;*/
+            margin: 5px 0 0 10px;
+        }
+        #fenlei .top .sousuo div:nth-child(2){
+            text-align: center;
+            margin-left: 10px;
+            margin-top: 5px;
+
+        }
+        #fenlei .neinong{
+            width: 375px;
+            height: 1000px;
+            display: flex;
+        }
+        #fenlei .neinong .left{
+            width: 85px;
+            height: 578px;
+            /*border: solid 1px red;*/
+        }
+        #fenlei .neinong .left ul{
+            list-style: none;
+        }
+        #fenlei .neinong .left ul li{
+            width: 85px;
+            height: 46px;
+            /*border: solid 1px #000000;*/
+            text-align: center;
+            line-height: 50px;
+        }
+        #fenlei .neinong .right {
+            width: 289px;
+            height: 575px;
+            /*border: solid 1px red;*/
+        }
+        #fenlei .neinong .right div:nth-child(1){
+            display: flex;
+            float: left;
+        }
+        #fenlei .neinong .right div:nth-child(2){
+             font-size: 12px;
+             color: #999999;
+             float: right;
+             margin-top: 10px;
+         }
+       input{
+           border: 0;
+           outline: none;
+           background-color: gainsboro;
+       }
+        #fenlei .neinong .right div:nth-child(3){
+            margin-top: 30px;
+            width: 289px;
+            height: 544px;
+            /*border: solid 1px #000000;*/
+        }
+        #fenlei .neinong .right div:nth-child(3) ul{
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        #fenlei .neinong .right div:nth-child(3) ul li{
+            width: 83px;
+            height: 107px;
+            /*border: solid 1px red;*/
+            background-image: url("https://img14.360buyimg.com/focus/s140x140_jfs/t27136/183/1628977274/31007/a6f7ed55/5be6ebd8Nb07ef492.png");
+            background-size: 80px 70px;
+            background-repeat: no-repeat;
+           text-align: center;
+            line-height: 166px;
+            justify-content: space-around;
+            font-size: 12px;
+        }
+        #fenlei .dingwei{
+            width: 375px;
+            height: 50px;
+            /*border: solid 1px red;*/
+        }
+        #fenlei .dingwei ul{
+            display: flex;
+            list-style: none;
+            position: fixed;
+            justify-content: center;
+            bottom: 0;
+            background-color: white;
+        }
+        #fenlei .dingwei ul li{
+            width: 75px;
+            height: 50px;
+            /*border: solid 1px #000000;*/
+            font-size: 12px;
+            text-align: center;
+
+        }
+        #fenlei .dingwei ul li span{
+            background-color: white;
+            font-size: 33px;
+        }
+        #fenlei .dingwei ul li a{
+            /*去除下划线*/
+            text-decoration: none;
+            color: black;
+        }
+
+
+
+    </style>
+</head>
+<body>
+<div id="fenlei">
+    <div class="top">
+            <div class="fanhui"><a style="text-decoration: none;color: black" href="jdshopping.html"><</a></div>
+            <div class="sousuo">
+                <div>
+                <span class="iconfont" style="font-size: 20px;">&#xe63c;</span>
+                </div>
+                <div>
+                <input type="text" style="text-align: left;font-size: 15px;" placeholder="请输入您想要的宝贝">
+                </div>
+            </div>
+    </div>
+    <div class="neinong">
+        <div class="left">
+            <ul>
+                <li style="color: red">热门推荐</li>
+                <li>精品男装</li>
+                <li>精品女装</li>
+                <li>手机数码</li>
+                <li>电脑办公</li>
+                <li>美妆护肤</li>
+                <li>个人清洁</li>
+                <li>汽车生活</li>
+                <li>京东超市</li>
+                <li>男鞋女鞋</li>
+            </ul>
+        </div>
+        <div class="right">
+            <div>
+            <h4>热门精选</h4>
+            </div>
+            <div>
+            <span>排行榜></span>
+            </div>
+            <div>
+                <ul>
+                    <li>手机</li>
+                    <li>手机</li>
+                    <li>手机</li>
+                    <li>手机</li>
+                    <li>手机</li>
+                    <li>手机</li>
+                    <li>手机</li>
+                    <li>手机</li>
+                    <li>手机</li>
+                    <li>手机</li>
+                    <li>手机</li>
+                    <li>手机</li>
+                    <li>手机</li>
+                    <li>手机</li>
+                    <li>手机</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="dingwei">
+        <ul>
+            <li><a href="jdshopping.html"><span class="iconfont">&#xe63b;</span><br>首页</a></li>
+            <li><a href="fenlei.html"><span class="iconfont">&#xe743;</span><br>分类</a></li>
+            <li><a href=""><span class="iconfont">&#xe674;</span><br>我的</a></li>
+            <li><a href=""><span class="iconfont">&#xe63c;</span><br>搜索</a></li>
+            <li><a href="login.html"><span class="iconfont">&#xe7aa;</span><br>用户</a></li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>
